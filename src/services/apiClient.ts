@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GAME_SITE_API_KEY } from "../../secrets";
+import { GAME_SITE_API_KEY } from "../../secrets/secrets";
 
 export default axios.create({
   baseURL: "https://api.rawg.io/api",
