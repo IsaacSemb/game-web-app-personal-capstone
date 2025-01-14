@@ -3,7 +3,7 @@ import useData from "../hooks/useData";
 interface GenreObject {
   id: number;
   name: string;
-  image_background:string
+  image_background: string;
 }
 
 function useGenres() {
