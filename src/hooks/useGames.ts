@@ -15,15 +15,19 @@ export interface GameObject {
   metacritic: number;
 }
 
-function useGames(selectedGenre: GenreObject | null) {
+function useGames(
+  selectedGenre: GenreObject | null,
+  selectedPlatform: Platform | null
+) {
   const gamesData = useData<GameObject>(
     "/games",
     {
       params: {
         genres: selectedGenre?.id,
+        platforms: selectedPlatform?.id,
       },
     },
-    [selectedGenre?.id]
+    [selectedGenre?.id, selectedPlatform?.id]
   );
   return gamesData;
 }
