@@ -1,6 +1,6 @@
 import useData from "../hooks/useData";
 
-interface GenreObject {
+export interface GenreObject {
   id: number;
   name: string;
   image_background: string;
