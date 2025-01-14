@@ -5,9 +5,10 @@ import GenreSkeleton from "./GenreSkeleton";
 
 interface props {
   genreSelected: (genre: GenreObject) => void;
+  activeGenre: GenreObject | null;
 }
 
-function GenreList({ genreSelected }: props) {
+function GenreList({ genreSelected, activeGenre }: props) {
   const { data: genres, error, isLoading } = useGenres();
 
   if (error) return null;
@@ -24,12 +25,13 @@ function GenreList({ genreSelected }: props) {
               borderRadius={8}
             />
             <Button
+              fontWeight={genre.id === activeGenre?.id ? "bold" : "normal"}
               onClick={() => {
                 // console.log(genre);
                 genreSelected(genre);
               }}
               variant="link"
-              fontSize="lg"
+              fontSize={genre.id === activeGenre?.id ? "2xl" : "lg"}
               whiteSpace="normal"
               textAlign="left"
               wordBreak="break-word"
