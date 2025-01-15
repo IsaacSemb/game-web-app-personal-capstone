@@ -4,6 +4,7 @@ import PlatformIcons from "./PlatformIcons";
 import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "../services/imageOptimizer";
 import GameCardContainer from "./GameCardContainer";
+import EmojiComponent from "./EmojiComponent";
 export interface GameCardProp {
   game: GameObject;
 }
@@ -13,10 +14,9 @@ function GameCard({ game }: GameCardProp) {
       <Card>
         <Image src={getCroppedImageUrl(game.background_image)} />
         <CardBody>
-          <Heading fontSize="2xl">{game.name}</Heading>
-
           <HStack
             paddingTop="5px"
+            paddingBottom="5px"
             display="flex"
             justifyContent="space-between"
           >
@@ -25,6 +25,9 @@ function GameCard({ game }: GameCardProp) {
             />
             <CriticScore criticScore={game.metacritic} />
           </HStack>
+          <Heading fontSize="2xl">
+            {game.name} <EmojiComponent rating={game.rating_top} />
+          </Heading>
         </CardBody>
       </Card>
     </GameCardContainer>
