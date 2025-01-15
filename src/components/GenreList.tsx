@@ -27,7 +27,6 @@ function GenreList({ genreSelected, activeGenre }: props) {
             <Button
               fontWeight={genre.id === activeGenre?.id ? "bold" : "normal"}
               onClick={() => {
-                // console.log(genre);
                 genreSelected(genre);
               }}
               variant="link"
