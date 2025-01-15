@@ -1,4 +1,11 @@
-import { HStack, List, ListItem, Image, Button } from "@chakra-ui/react";
+import {
+  HStack,
+  List,
+  ListItem,
+  Image,
+  Button,
+  Heading,
+} from "@chakra-ui/react";
 import useGenres, { GenreObject } from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/imageOptimizer";
 import GenreSkeleton from "./GenreSkeleton";
@@ -15,32 +22,38 @@ function GenreList({ genreSelected, activeGenre }: props) {
   // if (isLoading) return <Spinner />;
   if (isLoading) return <GenreSkeleton />;
   return (
-    <List>
-      {genres.map((genre) => (
-        <ListItem paddingY="5px" key={genre.id}>
-          <HStack>
-            <Image
-              boxSize="32px"
-              src={getCroppedImageUrl(genre.image_background)}
-              borderRadius={8}
-            />
-            <Button
-              fontWeight={genre.id === activeGenre?.id ? "bold" : "normal"}
-              onClick={() => {
-                genreSelected(genre);
-              }}
-              variant="link"
-              fontSize={genre.id === activeGenre?.id ? "2xl" : "lg"}
-              whiteSpace="normal"
-              textAlign="left"
-              wordBreak="break-word"
-            >
-              {genre.name}
-            </Button>
-          </HStack>
-        </ListItem>
-      ))}
-    </List>
+    <>
+      <Heading fontSize="3xl" marginBottom={3}>
+        Genres
+      </Heading>
+      <List>
+        {genres.map((genre) => (
+          <ListItem paddingY="5px" key={genre.id}>
+            <HStack>
+              <Image
+                objectFit="cover"
+                boxSize="32px"
+                src={getCroppedImageUrl(genre.image_background)}
+                borderRadius={8}
+              />
+              <Button
+                fontWeight={genre.id === activeGenre?.id ? "bold" : "normal"}
+                onClick={() => {
+                  genreSelected(genre);
+                }}
+                variant="link"
+                fontSize={genre.id === activeGenre?.id ? "2xl" : "lg"}
+                whiteSpace="normal"
+                textAlign="left"
+                wordBreak="break-word"
+              >
+                {genre.name}
+              </Button>
+            </HStack>
+          </ListItem>
+        ))}
+      </List>
+    </>
   );
 }
 
