@@ -1,50 +1,81 @@
-# React + TypeScript + Vite
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎮 Gamers - RAWG Frontend API  
 
-Currently, two official plugins are available:
+Welcome to **Gamers**, a sleek and modern frontend interface for browsing games using the **RAWG API**. Built with **React (TypeScript)** and powered by **Vite**, this project provides an intuitive and responsive UI using **Chakra UI**. Deployed seamlessly on **Vercel**.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 **Live Demo:** [Gamers App](https://gamers-amuht6w69-isaac-ssembuusis-projects.vercel.app/)  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 📌 Features  
 
-- Configure the top-level `parserOptions` property like this:
+✅ Browse thousands of games from the **RAWG API**  
+✅ Search for specific games  
+✅ Filter by platform, genre, and more  
+✅ Responsive and modern UI with **Chakra UI**  
+✅ Fast performance with **Vite** and **TypeScript**  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🛠️ Tech Stack  
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Frontend:** React (TypeScript)  
+- **Styling:** Chakra UI  
+- **Build Tool:** Vite  
+- **Deployment:** Vercel  
+- **API:** RAWG API  
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+---
+
+## 🚀 Getting Started  
+
+### 🔧 Installation  
+
+1. **Clone the repository:**  
+   ```sh
+   git clone https://github.com/your-username/gamers-frontend.git
+   cd gamers-frontend
+   ```
+
+2. **Install dependencies:**  
+   ```sh
+   npm install
+   ```
+
+3. **Set up environment variables:**  
+   - Create a `.env` file in the root directory  
+   - Add your RAWG API key:  
+     ```
+     VITE_RAWG_API_KEY=your_api_key_here
+     ```
+
+4. **Start the development server:**  
+   ```sh
+   npm run dev
+   ```
+
+---
+
+## 🌍 Deployment  
+
+This project is deployed on **Vercel** for seamless hosting. To deploy your own version:  
+
+1. Push your project to **GitHub**  
+2. Connect your repo to **Vercel**  
+3. Configure environment variables on Vercel  
+4. Deploy with a single click! 🎉  
+
+---
+
+## 🤝 Contributing  
+
+Feel free to **fork** this repo and submit a **pull request** if you have improvements!  
+
+---
+
+### 📩 Contact  
+
+For questions or suggestions, reach out via GitHub Issues.
+
+---
