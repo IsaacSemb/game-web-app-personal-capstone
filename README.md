@@ -4,7 +4,8 @@
 
 Welcome to **Gamers**, a sleek and modern frontend interface for browsing games using the **RAWG API**. Built with **React (TypeScript)** and powered by **Vite**, this project provides an intuitive and responsive UI using **Chakra UI**. Deployed seamlessly on **Vercel**.  
 
-🚀 **Live Demo:** [Games Discovery Demo]([https://gamershub-beryl.vercel.app/])  
+🚀 **Live Demo:** [Game Discovery demo](https://gamershub-beryl.vercel.app/)
+
 
 
 ---
